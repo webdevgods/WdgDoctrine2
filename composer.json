@@ -1,0 +1,44 @@
+{
+    "name": "webdevgods/wdg-doctrine2",
+    "description": "Base set of libraries for Doctrine 2.",
+    "type": "zf-module",
+    "license": "MIT",
+    "keywords": [
+        "library",
+        "libs",
+        "ZF2",
+        "Zend Framework",
+        "webdevgods",
+        "wdg",
+        "module"
+    ],
+    "homepage": "https://github.com/webdevgods/WdgDoctrine2",
+    "authors": [
+        {
+            "name": "Jessie Green",
+            "email": "jessie.ims@gmail.com",
+            "homepage": "http://jessiegreen.com/"
+        },
+        {
+            "name": "Dustin Moorman",
+            "email": "dustinmoorman@gmail.com",
+            "homepage": "http://dustinmoorman.com/"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "~2.1"
+    },
+    "suggest": {
+        "webdevgods/wdg-zf2": "Base set of libraries for using Zend Framework 2.",
+        "webdevgods/wdg-base": "Base set of libraries for general php deeds."
+    },
+    "autoload": {
+        "psr-0": {
+            "WdgDoctrine2": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}
