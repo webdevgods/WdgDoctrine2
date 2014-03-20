@@ -1,5 +1,5 @@
 <?php
-namespace WdgDoctrine2\Doctrine2;
+namespace WdgDoctrine2\Annotation;
 
 class AnnotationDriver extends \Doctrine\ORM\Mapping\Driver\AnnotationDriver
 {

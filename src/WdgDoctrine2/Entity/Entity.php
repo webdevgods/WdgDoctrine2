@@ -1,5 +1,5 @@
 <?php
-namespace WdgDoctrine2\Doctrine2;
+namespace WdgDoctrine2\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 

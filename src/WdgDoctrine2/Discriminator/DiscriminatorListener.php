@@ -1,5 +1,5 @@
 <?php
-namespace WdgDoctrine2\Doctrine2;
+namespace WdgDoctrine2\Discriminator;
 
 /**
  * @link http://thoughtsofthree.com/2011/04/defining-discriminator-maps-at-child-level-in-doctrine-2-0/ 
@@ -10,7 +10,7 @@ class DiscriminatorListener implements \Doctrine\Common\EventSubscriber
     private $cachedMap; // The cached map for fast lookups
     private $map;       // Our temporary map for calculations
   
-    const ENTRY_ANNOTATION = 'WdgDoctrine2\Doctrine\DiscriminatorEntry';
+    const ENTRY_ANNOTATION = 'WdgDoctrine2\Discriminator\DiscriminatorEntry';
   
     public function getSubscribedEvents() 
     {  
@@ -26,7 +26,7 @@ class DiscriminatorListener implements \Doctrine\Common\EventSubscriber
     
     private function extractEntry( $class ) 
     {  
-        $annotations = \WdgDoctrine2\Doctrine\Annotation::getAnnotationsForClass( $class );
+        $annotations = \WdgDoctrine2\Annotation\Annotation::getAnnotationsForClass( $class );
         $success = false;  
         
         foreach($annotations as $key => $annotation)
@@ -52,7 +52,7 @@ class DiscriminatorListener implements \Doctrine\Common\EventSubscriber
     {  
         $rc             = new \ReflectionClass( $class );  
         $is_base_class  = false;
-        $annotations    = \WdgDoctrine2\Doctrine\Annotation::getAnnotationsForClass( $class );
+        $annotations    = \WdgDoctrine2\Annotation\Annotation::getAnnotationsForClass( $class );
         
         
         foreach($annotations as $annotation)
