@@ -10,7 +10,8 @@
         "Zend Framework",
         "webdevgods",
         "wdg",
-        "module"
+        "module",
+        "doctrine"
     ],
     "homepage": "https://github.com/webdevgods/WdgDoctrine2",
     "authors": [
